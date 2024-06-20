@@ -1,0 +1,100 @@
+/* App.css */
+
+body {
+  background-color: #121212;
+  color: #ffffff;
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+  position: relative;
+  z-index: 1; /* Ensure container is covered by overlay */
+}
+
+.header {
+  text-align: center;
+  color: #bb86fc;
+  margin-bottom: 40px;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.treeview-container {
+  background-color: #1e1e1e;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+button {
+  background-color: #6200ea !important;
+  color: #ffffff !important;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+  background-color: #3700b3 !important;
+  transform: scale(1.05);
+}
+
+.popover .MuiPopover-paper {
+  background-color: transparent;
+  box-shadow: none;
+}
+
+.popover-content {
+  background-color: #222222;
+  color: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+  animation: slideIn 0.3s ease;
+}
+
+.popover-header {
+  color: #bb86fc;
+}
+
+.popover-button {
+  background-color: #6200ea !important;
+  color: #ffffff !important;
+}
+
+.popover-button:hover {
+  background-color: #3700b3 !important;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
+  z-index: 10; /* Ensure the overlay is above all other content */
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
